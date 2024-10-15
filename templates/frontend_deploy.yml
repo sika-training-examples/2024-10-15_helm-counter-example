@@ -25,5 +25,10 @@ spec:
           env:
             - name: API_ORIGIN
               value: http://{{ .Release.Name }}-backend
+          {{ if .Values.frontendEnvSecret }}
+          envFrom:
+            - secretRef:
+                name: {{ .Values.frontendEnvSecret }}
+          {{ end }}
           ports:
             - containerPort: 3000
