@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: main
-          image: ghcr.io/ondrejsika/counter
+          image: {{ .Values.backendImage }}
           resources:
             requests:
               cpu: 20m

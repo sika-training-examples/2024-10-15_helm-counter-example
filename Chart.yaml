@@ -2,4 +2,4 @@ apiVersion: v2
 name: counter
 description: An Example App for Kubernetes Training
 type: application
-version: 2024.10.14
+version: 2024.10.15-dev
